@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
  * The class has the main method to get the application started.
  *
- * @author Eric Opoku
+ * @author Durjoy Acharya
  * @version 1.0
  * @since 1.0
  */
