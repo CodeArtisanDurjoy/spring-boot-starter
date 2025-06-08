@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * System configuration properties groups all properties prefixed with "system.".
  *
- * @author Eric Opoku
+ * @author Durjoy Acharjya
  * @version 1.0
  * @since 1.0
  */

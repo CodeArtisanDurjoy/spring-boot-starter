@@ -193,23 +193,23 @@ TBD
         EMAIL_USERNAME
         EMAIL_PASSWORD # If using gmail, this must be a 2 step verification enabled app password
 
-* The profiles defined in the application are **development**, **test**,
-  **integration-test**, **integration-test-ci**, and **production** to test out production
-  functionalities.
-    - Datasource must be provided for production profile for the application to run.
 
-*NB: Windows users must use **gradlew** instead of **./gradlew***
+o start the Spring Boot application:
 
-* Start Spring Boot application using on linux/unix - **./gradlew bootRun**
-* Run unit tests using - **./gradlew test**
-* Run integration tests using - **./gradlew integrationTest**
-* Run all tests using - **./gradlew testAll**
-*
-* Access application on *http://localhost:8080/*
-* Access in-memory database on *http://localhost:8080/console*
-* Run owasp dependency check - **./gradlew dependencyCheckAnalyze --info**
-* Access Swagger UI - **http://localhost:8080/swagger-ui/index.html**
+    From the project root: mvn spring-boot:run
+    Or first build the JAR: mvn clean install then run: java -jar target/your-project-name-0.0.1-SNAPSHOT.jar (replace your-project-name with your actual artifactId)
 
+To run unit tests: mvn test
+
+To run integration tests: mvn verify (This will run the integration-test phase as configured in the Failsafe plugin in pom.xml)
+
+To run OWASP Dependency Check: mvn org.owasp:dependency-check-maven:${owasp.dependencycheck.plugin.version}:check
+
+Access application on http://localhost:8080/
+
+Access in-memory database on http://localhost:8080/console
+
+Access Swagger UI - http://localhost:8080/swagger-ui/index.html
 ## Running on Docker (Assuming docker is installed)
 
 * in the directory where docker-compose.yml file resides, simply run the command - **docker-compose
